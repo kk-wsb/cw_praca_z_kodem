@@ -1,0 +1,24 @@
+name: GitHub Actions Demo
+on: [push]
+jobs:
+  Check-Docker-Python-Versions:
+    runs-on: ubuntu-latest
+    steps:
+      - run: docker --version
+      - run: python --version
+      - name: Check Docker & Python versions
+        uses: actions/checkout@v3
+  Test-Application:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Test Requirments & Application
+        uses: actions/checkout@v3
+      - run: pip install -r requirements.txt
+      - run: pip install pylint
+      - run: pylint app.py
+  Build-Docker-Image:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Build Docker Image
+        uses: actions/checkout@v3
+      - run: docker build --tag my-first-tag .
