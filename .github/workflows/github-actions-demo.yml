@@ -5,7 +5,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo "Checking Docker and Python version"
-      - name: Check Docker & Python version"
-    uses: actions/checkout@v3
+      - name: Check Docker & Python version
+      uses: actions/checkout@v3
   test:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Checking all requirments and preparing environemnt"
+      - name: Check Requirmets & Env
+      uses: actions/checkout@v3
   build:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Building Docker image"
+      - name: Build Docker image
+      uses: actions/checkout@v3
