@@ -4,8 +4,14 @@ jobs:
   Check-Docker-Python-Versions:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "Checking Docker and Python version"
       - run: docker --version
       - run: python --version
       - name: Check Docker & Python versions
+        uses: actions/checkout@v3
+  Test-Application:
+    runs-on: ubuntu-latest
+    steps:
+      - run: pip install -r requirements.txt
+      - run: pylint app.py
+      - name: Test Requirments & Application
         uses: actions/checkout@v3
