@@ -1,9 +1,7 @@
 name: GitHub Actions Demo
 on: [push]
 jobs:
-  Check-Docker-Python-Version:
+  Explore-GitHub-Actions:
     runs-on: ubuntu-latest
     steps:
       - run: echo "Checking Docker and Python version"
-      - name: Check Docker & Python version"
-      uses: actions/checkout@v3
