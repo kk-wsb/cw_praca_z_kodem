@@ -11,8 +11,6 @@ jobs:
   Test-Application:
     runs-on: ubuntu-latest
     steps:
-      - run: pip install -r ../../requirements.txt
-      - run: pylint ../../app.py
       - run: ls -la
       - name: Test Requirments & Application
         uses: actions/checkout@v3
