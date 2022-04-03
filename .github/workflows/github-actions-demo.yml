@@ -5,5 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo "Checking Docker and Python version"
+      - run: docker --version
+      - run: python --version
       - name: Check Docker & Python versions
         uses: actions/checkout@v3
