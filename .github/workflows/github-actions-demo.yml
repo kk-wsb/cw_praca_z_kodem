@@ -5,3 +5,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo "Checking Docker and Python version"
+        uses: actions/checkout@v3
